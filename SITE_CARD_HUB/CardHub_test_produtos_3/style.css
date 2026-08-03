@@ -1,0 +1,760 @@
+/*==================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:#ffffff;
+    display:flex;
+    min-height:100vh;
+}
+
+/*==================================================
+                    SIDEBAR
+==================================================*/
+
+.sidebar{
+
+    width:250px;
+
+    background:#111111;
+
+    border-right:1px solid #222;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    bottom:0;
+
+    padding:25px 18px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:50px;
+
+}
+
+.logo-icon{
+
+    width:45px;
+
+    height:45px;
+
+    background:#ff6b00;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+.logo h2{
+
+    font-size:30px;
+
+}
+
+.logo span{
+
+    color:#ff6b00;
+
+}
+
+/*==================================================
+                    MENU
+==================================================*/
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:#dddddd;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar nav a:hover{
+
+    background:#1f1f1f;
+
+    color:white;
+
+}
+
+.sidebar nav a.active{
+
+    background:#242424;
+
+    color:white;
+
+}
+
+.sidebar nav i{
+
+    width:20px;
+
+    text-align:center;
+
+}
+
+/*==================================================
+                    CONTEÚDO
+==================================================*/
+
+.content{
+
+    margin-left:250px;
+
+    width:calc(100% - 250px);
+
+    padding:35px;
+
+}
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+header{
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:40px;
+
+    margin-bottom:8px;
+
+}
+
+header p{
+
+    color:#999;
+
+    font-size:16px;
+
+}
+
+/*==================================================
+                    TOOLBAR
+==================================================*/
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==================================================
+                    PESQUISA
+==================================================*/
+
+#pesquisa{
+
+    flex:1;
+
+    min-width:260px;
+
+    height:52px;
+
+    background:#181818;
+
+    border:1px solid #2a2a2a;
+
+    border-radius:12px;
+
+    color:white;
+
+    padding:0 20px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+#pesquisa:focus{
+
+    outline:none;
+
+    border-color:#ff6b00;
+
+}
+
+/*==================================================
+                    SELECT
+==================================================*/
+
+#categoria{
+
+    width:220px;
+
+    height:52px;
+
+    background:#181818;
+
+    color:white;
+
+    border:1px solid #2a2a2a;
+
+    border-radius:12px;
+
+    padding:0 15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#categoria:focus{
+
+    outline:none;
+
+    border-color:#ff6b00;
+
+}
+
+/*==================================================
+                BOTÃO NOVO PRODUTO
+==================================================*/
+
+#novoProduto{
+
+    height:52px;
+
+    padding:0 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff6b00;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#novoProduto:hover{
+
+    background:#ff7f1f;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(255,107,0,.25);
+
+}
+
+#novoProduto i{
+
+    font-size:15px;
+
+}
+
+/*==========================================
+            TABELA DE PRODUTOS
+==========================================*/
+
+.table-area{
+
+    background:#171717;
+
+    border:1px solid #262626;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    margin-bottom:35px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#111;
+
+}
+
+thead th{
+
+    padding:20px;
+
+    text-align:left;
+
+    color:#ddd;
+
+    font-size:15px;
+
+    border-bottom:1px solid #262626;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#202020;
+
+}
+
+tbody td{
+
+    padding:18px 20px;
+
+    border-bottom:1px solid #262626;
+
+    color:#d5d5d5;
+
+}
+
+tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+/*==========================================
+            IMAGEM DO PRODUTO
+==========================================*/
+
+tbody img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:1px solid #333;
+
+}
+
+/*==========================================
+            STATUS
+==========================================*/
+
+.status{
+
+    display:inline-block;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.status.ativo{
+
+    background:rgba(46,204,113,.15);
+
+    color:#2ecc71;
+
+}
+
+.status.inativo{
+
+    background:rgba(231,76,60,.15);
+
+    color:#e74c3c;
+
+}
+
+/*==========================================
+            BOTÕES DE AÇÃO
+==========================================*/
+
+.acao{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:white;
+
+    margin-right:8px;
+
+    transition:.3s;
+
+}
+
+.visualizar{
+
+    background:#3498db;
+
+}
+
+.visualizar:hover{
+
+    background:#2980b9;
+
+}
+
+.editar{
+
+    background:#f39c12;
+
+}
+
+.editar:hover{
+
+    background:#d68910;
+
+}
+
+.excluir{
+
+    background:#e74c3c;
+
+}
+
+.excluir:hover{
+
+    background:#c0392b;
+
+}
+
+/*==========================================
+            PAGINAÇÃO
+==========================================*/
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.pagination button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#171717;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:1px solid #262626;
+
+}
+
+.pagination button:hover{
+
+    background:#ff6b00;
+
+    border-color:#ff6b00;
+
+}
+
+.pagination .active{
+
+    background:#ff6b00;
+
+    border-color:#ff6b00;
+
+}
+
+/*==========================================
+            ANIMAÇÕES
+==========================================*/
+
+.table-area,
+.toolbar,
+header{
+
+    animation:fadeUp .7s ease;
+
+}
+
+tbody tr{
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/*==========================================
+            SCROLL
+==========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#333;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff6b00;
+
+}
+
+/*==========================================
+            RESPONSIVO
+==========================================*/
+
+@media(max-width:1200px){
+
+    .toolbar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    #pesquisa{
+
+        width:100%;
+
+    }
+
+    #categoria{
+
+        width:100%;
+
+    }
+
+    #novoProduto{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        width:85px;
+
+        padding:20px 10px;
+
+    }
+
+    .logo h2{
+
+        display:none;
+
+    }
+
+    .sidebar nav a{
+
+        justify-content:center;
+
+        font-size:0;
+
+    }
+
+    .sidebar nav a i{
+
+        font-size:20px;
+
+        margin:0;
+
+    }
+
+    .content{
+
+        margin-left:85px;
+
+        width:calc(100% - 85px);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .table-area{
+
+        overflow-x:auto;
+
+    }
+
+    table{
+
+        min-width:900px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .content{
+
+        width:100%;
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+}
+

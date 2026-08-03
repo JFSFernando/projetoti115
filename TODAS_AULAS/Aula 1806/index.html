@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Completo</title>
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<!-- Botão Menu -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<!-- Menu Lateral -->
+<nav class="sidebar" id="sidebar">
+    <h2>Meu Site</h2>
+
+    <a href="#">🏠 Início</a>
+    <a href="#">📦 Produtos</a>
+    <a href="#">🛠 Serviços</a>
+    <a href="#">📞 Contato</a>
+</nav>
+
+<!-- Conteúdo -->
+<div class="content">
+
+    <!-- Carrossel -->
+    <div class="carousel">
+
+        <button class="prev" onclick="mudarSlide(-1)">❮</button>
+
+        <div class="slides">
+            <img src="https://picsum.photos/id/1015/1200/400" class="slide active">
+            <img src="https://picsum.photos/id/1016/1200/400" class="slide">
+            <img src="https://picsum.photos/id/1018/1200/400" class="slide">
+        </div>
+
+        <button class="next" onclick="mudarSlide(1)">❯</button>
+
+    </div>
+
+    <h1>Nossos Produtos</h1>
+
+    <!-- Cards -->
+    <section class="cards">
+
+        <div class="card">
+            <img src="https://picsum.photos/300/200?1">
+            <h3>Produto 1</h3>
+            <p>Descrição do produto.</p>
+            <button>Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300/200?2">
+            <h3>Produto 2</h3>
+            <p>Descrição do produto.</p>
+            <button>Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300/200?3">
+            <h3>Produto 3</h3>
+            <p>Descrição do produto.</p>
+            <button>Comprar</button>
+        </div>
+
+    </section>
+
+</div>
+
+<script src="teste.js"></script>
+</body>
+</html>

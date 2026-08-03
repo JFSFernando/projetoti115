@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📍 Buscar endereço no mapa</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="card">
+        <!-- Cabeçalho com botão de tema -->
+        <div class="header">
+            <div>
+                <h1>
+                    <span>📍</span> Encontre seu endereço
+                </h1>
+                <div class="subhead">
+                    Digite um endereço, clique em buscar e veja no mapa
+                </div>
+            </div>
+            <button id="btnTheme" class="theme-toggle" aria-label="Alternar tema">
+                🌙
+            </button>
+        </div>
+
+        <!-- Campo de busca + botão -->
+        <div class="busca-container">
+            <input
+                type="text"
+                id="enderecoInput"
+                placeholder="Ex: Rua Augusta, 500, São Paulo"
+                value="Av. Paulista, 1578 - São Paulo"
+            />
+            <button id="btnBuscar">🔍 Buscar</button>
+        </div>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+
+        <!-- Rodapé com coordenadas e status -->
+        <div class="info-rodape">
+            <div class="coordenadas" id="coordDisplay">📌 -23.5615, -46.6566</div>
+            <div class="status-msg" id="statusMsg">📍 Pronto para buscar</div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- JavaScript principal -->
+    <script src="script.js"></script>
+</body>
+</html>

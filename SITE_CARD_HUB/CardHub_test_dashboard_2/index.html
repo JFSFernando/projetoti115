@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Card Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <h2>Card <span>Hub</span></h2>
+
+        </div>
+
+        <nav>
+
+            <a href="../CardHub_test_dashboard_2/index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+
+            <a href="../CardHub_test_produtos_3/index.html">
+                <i class="fa-solid fa-cube"></i>
+                Produtos
+            </a>
+
+            <a href="../CardHub_test_transacoes_4/index.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transações
+            </a>
+
+            <a href="../CardHub_test_relatorios_5/index.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Relatórios
+            </a>
+
+            <a href="../CardHub_test_beneficios_6/index.html">
+                <i class="fa-solid fa-gift"></i>
+                Benefícios
+            </a>
+
+            <a href="../CardHub_test_parceiros_7/index.html">
+                <i class="fa-solid fa-users"></i>
+                Parceiros
+            </a>
+
+            <a href="../CardHub_test_configuracoes_8/index.html">
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+
+            <div>
+
+                <h1>Painel de Parceiro</h1>
+
+                <p>
+                    Gerencie seus produtos e acompanhe seu desempenho
+                </p>
+
+            </div>
+
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="top">
+
+                    <i class="fa-solid fa-cube"></i>
+
+                    <span class="green">
+                        +3 este mês
+                    </span>
+
+                </div>
+
+                <h2>24</h2>
+
+                <p>Produtos ativos</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="top">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                    <span class="green">
+                        +12%
+                    </span>
+
+                </div>
+
+                <h2>1.284</h2>
+
+                <p>Transações</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="top">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span class="green">
+                        +8%
+                    </span>
+
+                </div>
+
+                <h2>892</h2>
+
+                <p>Clientes</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="top">
+
+                    <i class="fa-solid fa-dollar-sign"></i>
+
+                    <span class="green">
+                        +18%
+                    </span>
+
+                </div>
+
+                <h2>R$ 48.920</h2>
+
+                <p>Receita</p>
+
+            </div>
+
+        </section>
+
+        <section class="middle">
+
+            <div class="chart-box">
+
+                <h2>Desempenho</h2>
+
+                <p>Receita dos últimos 7 meses</p>
+
+                <canvas id="salesChart"></canvas>
+
+            </div>
+
+            <div class="activities">
+
+                <h2>Atividades Recentes</h2>
+
+                <ul>
+
+                    <li>
+
+                        <strong>Nova transação processada</strong>
+
+                        <span>R$ 245,00</span>
+
+                        <small>2 min atrás</small>
+
+                    </li>
+
+                    <li>
+
+                        <strong>Produto atualizado</strong>
+
+                        <span>Gift Card Premium</span>
+
+                        <small>15 min atrás</small>
+
+                    </li>
+
+                    <li>
+
+                        <strong>Nova transação</strong>
+
+                        <span>R$ 890,00</span>
+
+                        <small>1 hora atrás</small>
+
+                    </li>
+
+                    <li>
+
+                        <strong>Novo cliente cadastrado</strong>
+
+                        <small>2 horas atrás</small>
+
+                    </li>
+
+                    <li>
+
+                        <strong>Nova transação</strong>
+
+                        <span>R$ 1.250,00</span>
+
+                        <small>3 horas atrás</small>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section class="products">
+
+            <div class="title">
+
+                <div>
+
+                    <h2>Produtos Cadastrados</h2>
+
+                    <p>Seus produtos mais vendidos</p>
+
+                </div>
+
+                <button id="novoProduto">
+
+                    + Cadastrar Produto
+
+                </button>
+
+            </div>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <h3>Gift Card Premium</h3>
+
+                    <small>Vale-Presente</small>
+
+                    <h2>R$ 18.420</h2>
+
+                    <p>342 vendas</p>
+
+                    <span class="green">+24%</span>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Cartão Refeição</h3>
+
+                    <small>Alimentação</small>
+
+                    <h2>R$ 12.800</h2>
+
+                    <p>256 vendas</p>
+
+                    <span class="green">+15%</span>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Cartão Benefícios</h3>
+
+                    <small>Múltiplos</small>
+
+                    <h2>R$ 9.450</h2>
+
+                    <p>189 vendas</p>
+
+                    <span class="green">+31%</span>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Gift Card Digital</h3>
+
+                    <small>Vale-Presente</small>
+
+                    <h2>R$ 7.800</h2>
+
+                    <p>156 vendas</p>
+
+                    <span class="green">+12%</span>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Cartão Cultura</h3>
+
+                    <small>Entretenimento</small>
+
+                    <h2>R$ 6.200</h2>
+
+                    <p>124 vendas</p>
+
+                    <span class="green">+8%</span>
+
+                </div>
+
+                <div class="product-card">
+
+                    <h3>Cartão Transporte</h3>
+
+                    <small>Mobilidade</small>
+
+                    <h2>R$ 4.900</h2>
+
+                    <p>98 vendas</p>
+
+                    <span class="green">+5%</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

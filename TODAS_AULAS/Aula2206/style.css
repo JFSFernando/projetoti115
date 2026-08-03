@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; }
+.login-container { width: 100%; max-width: 420px; }
+.login-box { background: white; border-radius: 24px; padding: 40px 35px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.login-header { text-align: center; margin-bottom: 30px; }
+.login-header i { font-size: 48px; color: #667eea; }
+.login-header h1 { font-size: 28px; color: #1a202c; margin: 10px 0 5px; }
+.login-header p { color: #718096; }
+.input-group { position: relative; margin-bottom: 20px; }
+.input-group i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #a0aec0; }
+.input-group input { width: 100%; padding: 14px 14px 14px 44px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 15px; transition: 0.3s; outline: none; }
+.input-group input:focus { border-color: #667eea; }
+.input-group input.error { border-color: #fc8181; }
+.error-msg { display: none; color: #fc8181; font-size: 12px; margin-top: 5px; }
+.error-msg.show { display: block; }
+.toggle-password { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #a0aec0; cursor: pointer; }
+.options-row { display: flex; justify-content: space-between; align-items: center; margin: 15px 0 20px; font-size: 14px; }
+.remember-me { display: flex; align-items: center; gap: 8px; color: #4a5568; cursor: pointer; }
+.forgot-link { color: #667eea; text-decoration: none; font-weight: 600; }
+.forgot-link:hover { text-decoration: underline; }
+.recaptcha-container { background: #f7fafc; border-radius: 12px; padding: 16px; margin-bottom: 20px; border: 2px solid #e2e8f0; }
+.recaptcha-box { display: flex; align-items: center; gap: 12px; }
+.recaptcha-box input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; accent-color: #667eea; }
+.recaptcha-icon { color: #667eea; font-size: 24px; margin-left: auto; }
+.btn-login { width: 100%; padding: 14px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+.btn-login:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(102,126,234,0.4); }
+.divider { text-align: center; margin: 20px 0; color: #a0aec0; position: relative; }
+.divider::before, .divider::after { content: ''; position: absolute; top: 50%; width: 40%; height: 1px; background: #e2e8f0; }
+.divider::before { left: 0; } .divider::after { right: 0; }
+.btn-google { width: 100%; padding: 14px; background: white; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.btn-google:hover { background: #f7fafc; border-color: #667eea; }
+.btn-google i { color: #ea4335; font-size: 20px; }
+.mfa-section { background: #f7fafc; border-radius: 12px; padding: 20px; margin-top: 15px; text-align: center; border: 2px solid #e2e8f0; }
+.mfa-section p { color: #4a5568; font-weight: 600; margin-bottom: 12px; }
+.btn-verify { padding: 10px 30px; background: #48bb78; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.signup-link { text-align: center; margin-top: 20px; color: #718096; }
+.signup-link a { color: #667eea; text-decoration: none; font-weight: 600; }
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: white; padding: 40px; border-radius: 24px; max-width: 400px; width: 90%; position: relative; }
+.modal-close { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #a0aec0; }
+.modal-content input { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; margin: 15px 0; }
+.modal-content button { width: 100%; padding: 14px; background: #667eea; color: white; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; }
+.toast { display: none; position: fixed; top: 20px; right: 20px; padding: 16px 24px; border-radius: 12px; color: white; font-weight: 600; z-index: 2000; animation: slideIn 0.3s; }
+.toast.success { background: #48bb78; } .toast.error { background: #fc8181; } .toast.info { background: #667eea; }
+@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }

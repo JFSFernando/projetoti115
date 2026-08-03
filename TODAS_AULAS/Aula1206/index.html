@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET e POST com Fetch API</title>
+    <link rel="stylesheet" href="teste.js">
+    <div class=" container">
+        <h1> Get e Post com Fetch API</h1>
+
+        <! -- Exemplo 1: Get  - Pegar dados -->
+
+    
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f7fc;
+            padding:30px;
+        }
+
+        .container{
+            max-width:1200px;
+            margin:auto;
+        }
+
+        h1{
+            text-align:center;
+            color:#0d6efd;
+            margin-bottom:30px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 4px 12px rgba(0,0,0,.1);
+        }
+
+        .card h2{
+            color:#0d6efd;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            margin-bottom:20px;
+            color:#555;
+        }
+
+        button{
+            background:#0d6efd;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        button:hover{
+            background:#084298;
+            transform:translateY(-2px);
+        }
+
+        .usuarios{
+            margin-top:20px;
+        }
+
+        .usuario{
+            background:#f8f9fa;
+            border-left:4px solid #0d6efd;
+            padding:12px;
+            margin-bottom:10px;
+            border-radius:5px;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+        }
+
+        input{
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+        }
+
+        .mensagem{
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        .sucesso{
+            color:green;
+        }
+
+        .erro{
+            color:red;
+        }
+
+        .loading{
+            color:#0d6efd;
+            margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔄 GET e POST com Fetch API</h1>
+
+    <div class="cards">
+
+        <!-- CARD GET -->
+        <div class="card">
+            <h2>🔍 GET - Buscar Usuários</h2>
+
+            <p>
+                Clique no botão para buscar usuários da API.
+            </p>
+
+            <button onclick="buscarUsuarios()">
+                Buscar Usuários
+            </button>
+
+            <div id="loading" class="loading"></div>
+
+            <div id="usuarios" class="usuarios"></div>
+        </div>
+
+        <!-- CARD POST -->
+        <div class="card">
+            <h2>📨 POST - Criar Usuário</h2>
+
+            <p>
+                Preencha os dados para criar um novo usuário.
+            </p>
+
+            <form id="formUsuario">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome do usuário"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                    required
+                >
+
+                <button type="submit">
+                    Criar Usuário
+                </button>
+
+            </form>
+
+            <div id="resultadoPost" class="mensagem"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    // ==========================================
+    // GET - BUSCAR USUÁRIOS
+    // ==========================================
+
+    async function buscarUsuarios(){
+
+        const usuariosDiv = document.getElementById("usuarios");
+        const loading = document.getElementById("loading");
+
+        usuariosDiv.innerHTML = "";
+        loading.innerHTML = "⏳ Carregando usuários...";
+
+        try{
+
+            /*
+                FETCH API - GET
+
+                Busca dados de uma API.
+                Quando não informamos o método,
+                o padrão é GET.
+            */
+
+            const resposta = await fetch(
+                "https://jsonplaceholder.typicode.com/users"
+            );
+
+            const usuarios = await resposta.json();
+
+            loading.innerHTML = "";
+
+            usuarios.forEach(usuario => {
+
+                usuariosDiv.innerHTML += `
+                    <div class="usuario">
+                        <strong>${usuario.name}</strong><br>
+                        📧 ${usuario.email}<br>
+                        📱 ${usuario.phone}
+                    </div>
+                `;
+
+            });
+
+        }catch(error){
+
+            loading.innerHTML =
+                "<span class='erro'>Erro ao buscar usuários.</span>";
+
+            console.error(error);
+
+        }
+
+    }
+
+    // ==========================================
+    // POST - CRIAR USUÁRIO
+    // ==========================================
+
+    const formulario =
+        document.getElementById("formUsuario");
+
+    formulario.addEventListener("submit", async function(event){
+
+        /*
+            preventDefault()
+            impede o recarregamento da página
+            após enviar o formulário.
+        */
+
+        event.preventDefault();
+
+        const nome =
+            document.getElementById("nome").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const resultado =
+            document.getElementById("resultadoPost");
+
+        try{
+
+            /*
+                FETCH API - POST
+
+                Envia dados para uma API.
+            */
+
+            const resposta = await fetch(
+                "https://jsonplaceholder.typicode.com/users",
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+
+                    body: JSON.stringify({
+                        nome:nome,
+                        email:email
+                    })
+                }
+            );
+
+            const dados = await resposta.json();
+
+            resultado.className =
+                "mensagem sucesso";
+
+            resultado.innerHTML = `
+                ✅ Usuário criado com sucesso!<br>
+                ID: ${dados.id}
+            `;
+
+            formulario.reset();
+
+        }catch(error){
+
+            resultado.className =
+                "mensagem erro";
+
+            resultado.innerHTML =
+                "❌ Erro ao criar usuário.";
+
+            console.error(error);
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
+O que este projeto demonstra:
+
+✅ fetch() com método GET
+✅ fetch() com método POST
+✅ async/await
+✅ try/catch para tratamento de erros
+✅ addEventListener()
+✅ event.preventDefault()
+✅ Captura de valores dos inputs (value)
+✅ Layout moderno e responsivo
+✅ Consumo da API pública JSONPlaceholder para testes.

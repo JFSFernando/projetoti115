@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-container {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: .3s;
+}
+
+.erro {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.icone {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.sucesso input {
+    border-color: green;
+}
+
+.sucesso .icone::before {
+    content: "✔";
+    color: green;
+}
+
+.falha input {
+    border-color: red;
+}
+
+.falha .icone::before {
+    content: "✖";
+    color: red;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#mensagemSucesso {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}

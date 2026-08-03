@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* MENU */
+
+.menu-btn{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:1000;
+    border:none;
+    background:#333;
+    color:white;
+    padding:12px 15px;
+    font-size:22px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sidebar{
+    position:fixed;
+    left:-250px;
+    top:0;
+    width:250px;
+    height:100%;
+    background:#222;
+    transition:.3s;
+    padding-top:60px;
+    z-index:999;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar h2{
+    color:white;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+}
+
+.sidebar a:hover{
+    background:#444;
+}
+
+/* CONTEÚDO */
+
+.content{
+    padding:20px;
+}
+
+/* CARROSSEL */
+
+.carousel{
+    position:relative;
+    max-width:1200px;
+    margin:30px auto;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.slide{
+    width:100%;
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:10px;
+    cursor:pointer;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+
+/* CARDS */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card p{
+    padding:0 15px 15px;
+}
+
+.card button{
+    margin:15px;
+    width:calc(100% - 30px);
+    padding:10px;
+    border:none;
+    background:#007bff;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#0056b3;
+}

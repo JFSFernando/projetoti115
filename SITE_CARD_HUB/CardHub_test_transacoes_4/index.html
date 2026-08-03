@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Card Hub | Transações</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===================================
+            MENU LATERAL
+=================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <h2>Card <span>Hub</span></h2>
+
+    </div>
+
+    <nav>
+
+            <a href="../CardHub_test_dashboard_2/index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+
+            <a href="../CardHub_test_produtos_3/index.html">
+                <i class="fa-solid fa-cube"></i>
+                Produtos
+            </a>
+
+            <a href="../CardHub_test_transacoes_4/index.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transações
+            </a>
+
+            <a href="../CardHub_test_relatorios_5/index.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Relatórios
+            </a>
+
+            <a href="../CardHub_test_beneficios_6/index.html">
+                <i class="fa-solid fa-gift"></i>
+                Benefícios
+            </a>
+
+            <a href="../CardHub_test_parceiros_7/index.html">
+                <i class="fa-solid fa-users"></i>
+                Parceiros
+            </a>
+
+            <a href="../CardHub_test_configuracoes_8/index.html">
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </a>
+
+        </nav>
+
+</aside>
+
+<!-- ===================================
+            CONTEÚDO
+=================================== -->
+
+<main class="content">
+
+<header>
+
+    <h1>Transações</h1>
+
+    <p>
+        Gerencie pagamentos, recebimentos e movimentações financeiras.
+    </p>
+
+</header>
+
+<!-- ===================================
+            CARDS
+=================================== -->
+
+<section class="cards-resumo">
+
+    <div class="card-info">
+
+        <div class="icone">
+            <i class="fa-solid fa-wallet"></i>
+        </div>
+
+        <div>
+
+            <h3>Receita Total</h3>
+
+            <h2>R$ 48.920</h2>
+
+            <span class="positivo">+18%</span>
+
+        </div>
+
+    </div>
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-clock"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Pendente</h3>
+
+            <h2>R$ 7.840</h2>
+
+            <span class="alerta">12 pagamentos</span>
+
+        </div>
+
+    </div>
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Total Transações</h3>
+
+            <h2>1.284</h2>
+
+            <span class="positivo">+12%</span>
+
+        </div>
+
+    </div>
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Ticket Médio</h3>
+
+            <h2>R$ 382</h2>
+
+            <span class="positivo">+6%</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+            FILTROS
+=================================== -->
+
+<section class="toolbar">
+
+    <input
+        type="text"
+        id="pesquisa"
+        placeholder="Pesquisar cliente ou ID da transação">
+
+    <select id="status">
+
+        <option>Todos</option>
+
+        <option>Pago</option>
+
+        <option>Pendente</option>
+
+        <option>Cancelado</option>
+
+    </select>
+
+    <select id="periodo">
+
+        <option>Hoje</option>
+
+        <option>Últimos 7 dias</option>
+
+        <option>Últimos 30 dias</option>
+
+        <option>Este Ano</option>
+
+    </select>
+
+    <button id="novaTransacao">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Nova Transação
+
+    </button>
+
+</section>
+
+<!-- ===================================
+            TABELA
+=================================== -->
+
+<section class="table-area">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Cliente</th>
+
+<th>Produto</th>
+
+<th>Data</th>
+
+<th>Valor</th>
+
+<th>Status</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaTransacoes">
+
+<tr>
+
+<td>#1001</td>
+
+<td>João Silva</td>
+
+<td>Gift Card Premium</td>
+
+<td>15/06/2026</td>
+
+<td>R$ 250,00</td>
+
+<td>
+
+<span class="status pago">
+
+Pago
+
+</span>
+
+</td>
+
+<td>
+
+<button class="acao visualizar">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="acao editar">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="acao excluir">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1002</td>
+
+<td>Maria Souza</td>
+
+<td>Cartão Benefícios</td>
+
+<td>16/06/2026</td>
+
+<td>R$ 890,00</td>
+
+<td>
+
+<span class="status pendente">
+
+Pendente
+
+</span>
+
+</td>
+
+<td>
+
+<button class="acao visualizar">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="acao editar">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="acao excluir">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1003</td>
+
+<td>Carlos Lima</td>
+
+<td>Gift Card Digital</td>
+
+<td>18/06/2026</td>
+
+<td>R$ 1.250,00</td>
+
+<td>
+
+<span class="status cancelado">
+
+Cancelado
+
+</span>
+
+</td>
+
+<td>
+
+<button class="acao visualizar">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="acao editar">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="acao excluir">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1004</td>
+
+<td>Ana Martins</td>
+
+<td>Cartão Transporte</td>
+
+<td>20/06/2026</td>
+
+<td>R$ 490,00</td>
+
+<td>
+
+<span class="status pago">
+
+Pago
+
+</span>
+
+</td>
+
+<td>
+
+<button class="acao visualizar">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="acao editar">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="acao excluir">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1005</td>
+
+<td>Pedro Henrique</td>
+
+<td>Cartão Cultura</td>
+
+<td>22/06/2026</td>
+
+<td>R$ 620,00</td>
+
+<td>
+
+<span class="status pendente">
+
+Pendente
+
+</span>
+
+</td>
+
+<td>
+
+<button class="acao visualizar">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="acao editar">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="acao excluir">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ===================================
+            PAGINAÇÃO
+=================================== -->
+
+<div class="pagination">
+
+<button>
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<button class="active">1</button>
+
+<button>2</button>
+
+<button>3</button>
+
+<button>
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

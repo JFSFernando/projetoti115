@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos</title>
+    <link rel="stylesheet" href="teste.js">
+</head>
+<body>
+<div class="container">
+    <h1>🍕 Sistema de Pedidos</h1>
+    
+    <div class="card">
+        <h2>📋 Cardápio</h2>
+        <div class="menu">
+            <div class="item"><h3>🍕 Pizza</h3><div class="preco">R$ 45,90</div><button onclick="addItem('Pizza',45.90)">Adicionar</button></div>
+            <div class="item"><h3>🍔 Hambúrguer</h3><div class="preco">R$ 32,50</div><button onclick="addItem('Hambúrguer',32.50)">Adicionar</button></div>
+            <div class="item"><h3>🥤 Refrigerante</h3><div class="preco">R$ 8,00</div><button onclick="addItem('Refri',8)">Adicionar</button></div>
+            <div class="item"><h3>🍰 Sobremesa</h3><div class="preco">R$ 15,00</div><button onclick="addItem('Sobremesa',15)">Adicionar</button></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>🛒 Carrinho</h2>
+        <div id="carrinho"></div>
+        <div class="total">Total: <span id="total">R$ 0,00</span></div>
+        <div class="acoes">
+            <button onclick="aplicarDesconto()">🎫 Desconto (10%)</button>
+            <button class="btn-finalizar" onclick="finalizar()">✅ Finalizar</button>
+            <button class="btn-limpar" onclick="limpar()">🗑️ Limpar</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>💳 Pagamento</h2>
+        <select id="pagamento">
+            <option value="dinheiro">Dinheiro (5% off)</option>
+            <option value="cartao">Cartão</option>
+            <option value="pix">PIX (10% off)</option>
+        </select>
+    </div>
+    
+    <div class="card">
+        <h2>📜 Histórico</h2>
+        <div id="historico" class="historico"></div>
+    </div>
+</div>
+
+<script src="teste.js"></script>
+</body>
+</html>

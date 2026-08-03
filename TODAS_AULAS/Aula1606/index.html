@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBGE API</title>
+</head>
+<body>
+    <div class="container">
+        <h1> 📍 IBGE - Consulta de Municípios </h1>
+ 
+        <div class="search-box">
+            <select id="estadoSelect">
+                <option value="">Selecione um estado</option>
+            </select>
+            <select id="municipioSelect" disabled>
+                <option value="">Selecione um município</option>
+            </select>
+            <button onclick="consultar()">🔍 Consultar</button>
+    </div>
+ 
+    <div id="loading" class="loading" style="display:none;">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <div id="erro" class="erro" style="display:nome;"></div>
+
+    <div id="resultado" class="resultado" style="display:nome;">
+        <div class="card">
+            <h2 id="nomeCidade">-</h2>
+            <span id="ufCidade" class="badge">-</span>
+            <div class="info-grid">
+                <div><label>População</label><spam id=populacao>-</spam></div>
+                <div><label>Area (Km²)</label><spam id=area>-</spam></div>
+                <div><label>Densidade</label><spam id=densidade>-</spam></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <Span>🔑 API Key: demo-ibge-2024</Span>
+        <span>✅ API Publica IBGE</span>
+    </div>
+    
+ </div>
+ 
+    <script src="teste.js"></script>
+</body>
+</html>

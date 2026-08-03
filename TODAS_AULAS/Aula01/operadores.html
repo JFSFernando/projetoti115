@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores javaScript</title>
+</head>
+<body>
+    <h1>Operadores javaScript</h1>
+
+    <script>
+        // operadores aritimeticos
+
+        console.log(10 + 3) // adição
+        console.log(10 - 3) // subtração
+        console.log(10 * 3) //multiplicação
+        console.log(10 / 3) //divisão
+        console.log(10 % 3) //Resto de divisão ->  % 
+        console.log(2 ** 3) //Potenciação -> **
+
+        // Operadores de comparação - sempre retorna true ou false (booleanos)
+
+        console.log(5 > 3)
+        console.log(5 < 3)
+        console.log(5 >= 5)
+        console.log(5 == 5)
+        console.log(5 =="5")
+        console.log(5 === "5")
+        console.log(5 !== 3)
+        
+
+        // Notas do aluno
+let nota1 = 8;
+let nota2 = 6.5;
+let nota3 = 9;
+
+// Cálculo da média
+let media = (nota1 + nota2 + nota3) / 3;
+
+// Exibindo a média no console
+console.log("A média do aluno é:", media);
+
+console.log("A média do aluno é:", media.toFixed(2));
+
+let salario = 3500;
+let bonus = 500;
+let impostoPercentual = 12; // 12%
+
+// 1. Calcule o salário total (salário + bônus)
+let salarioTotal = salario + bonus ;
+console.log(salarioTotal)
+
+// 2. Calcule o valor do imposto sobre o salário total
+let valorImposto = salarioTotal * (impostoPercentual / 100);
+console.log(valorImposto)
+
+// 3. Calcule o salário líquido (total - imposto)
+let salarioLiquido = salarioTotal - valorImposto;
+console.log(salarioLiquido)
+
+// 4. O salário líquido é maior que 3000?
+console.log(salarioLiquido > 3000);
+
+// 5. O imposto é igual a 480?
+console.log(valorImposto === 480);
+
+// 6. O salário líquido é diferente do salário total?
+console.log(salarioLiquido !== salarioTotal);
+              
+
+    </script>
+    
+</body>
+</html>

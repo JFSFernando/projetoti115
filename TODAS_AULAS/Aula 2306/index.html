@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu + Filtro</title>
+    <link rel="stylesheet" href="Design.css">
+</head>
+<body>
+ 
+ 
+    <nav>
+        <h2>🛒 LOJA</h2>
+        <div class="menu-dropdown">
+            <button onclic="togglemenu()">🗒️Categoria ⬇</button>
+            <div class="menu-dropdown-content" id="menuItens">
+                <a href="#" onclick="filtrar ('todos')">📦 Todos</a>.
+                <a href="#" onclick="filtrar ('eletronicos')">📱Eletronico</a>
+                <a href="#" onclick="filtrar ('roupa')">👕Roupa</a>
+                <a href="#" onclick="filtrar ('livro')">📚Livro</a>
+                <a href="#" onclick="filtrar ('casa')">🏠Casa</a>
+                <a href="#" onclick="filtrar ('promoção')">🔥Promoção</a>
+               
+            </div>
+        </div>
+    </nav>
+ 
+    <input type="text" id="busca" placeholder="🔍Buscar produtos..." oninput="filtrarPorTexto">
+    <div id="produtos" class="grade"></div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
+ 
+ 

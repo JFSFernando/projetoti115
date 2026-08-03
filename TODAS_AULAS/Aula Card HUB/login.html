@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+     <title>Card Hub</title>
+     <link rel="stylesheet"
+          href="style.css">
+     <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ 
+</head>
+ 
+<body>
+ 
+<!-- ================= CONTEÚDO ================= -->
+ 
+<div class="container">
+ 
+<!-- ================= LADO ESQUERDO ================= -->
+ 
+<section class="left">
+ 
+<div class="logo">
+ 
+<div class="logo-icon">
+🛒
+</div>
+ 
+<h2>Card <span>Hub</span></h2>
+ 
+</div>
+ 
+<div class="hero">
+ 
+<h1>Conectando empresas,
+clientes e oportunidades.</h1>
+ 
+<p>Uma plataforma moderna para gestão de cartões,
+benefícios e parcerias comerciais com segurança,
+tecnologia e praticidade.</p>
+ 
+</div>
+ 
+<!-- CARROSSEL -->
+ 
+<div class="carousel">
+ 
+<button class="prev">❮</button>
+ 
+<div class="slides">
+ 
+<img class="slide active"
+src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop"
+        alt="Pagamento digital">
+ 
+<img class="slide"
+src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&auto=format&fit=crop"
+        alt="Cartão de crédito">
+ 
+<img class="slide"
+src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop"
+        alt="Tecnologia financeira">
+ 
+</div>
+ 
+<button class="next">❯</button>
+ 
+</div>
+ 
+<!-- CARDS -->
+ 
+<div class="cards">
+<div class="card">
+<div class="icon">
+ 
+<i class="fas fa-shield-alt"></i>
+ 
+</div>
+ 
+<h3>Segurança</h3>
+ 
+<p>Proteção total dos dados.</p>
+ 
+</div>
+<div class="card">
+<div class="icon">
+<i class="fas fa-box"></i>
+</div>
+ 
+<h3>Integração</h3>
+ 
+<p>Conecte qualquer sistema.</p>
+ 
+</div>
+<div class="card">
+<div class="icon">
+<i class="fas fa-gift"></i>
+</div>
+ 
+<h3>Benefícios</h3>
+ 
+<p>Vantagens exclusivas.</p>
+ 
+</div>
+<div class="card">
+<div class="icon">
+<i class="fas fa-chart-line"></i>
+</div>
+ 
+<h3>Controle</h3>
+ 
+<p>Tudo em tempo real.</p>
+ 
+</div>
+
+</div>
+ 
+</section>
+ 
+<!-- ================= LOGIN ================= -->
+ 
+<section class="right">
+ 
+<div class="login-box">
+ 
+<h2>Acesse sua parceria</h2>
+ 
+<form id="loginForm">
+ 
+<label>E-mail</label>
+ 
+<input
+id="email"
+type="email"
+placeholder="email@empresa.com">
+ 
+<small id="erroEmail"
+class="erro"></small>
+ 
+<label>Senha</label>
+ 
+<div class="password-box">
+ 
+<input
+id="senha"
+type="password"
+placeholder="********">
+ 
+<button
+type="button"
+id="mostrarSenha">
+ 
+<i class="fa-solid fa-eye"></i>
+ 
+</button>
+ 
+</div>
+ 
+<small id="erroSenha"
+class="erro"></small>
+ 
+<div class="options">
+ 
+<label>
+ 
+<input
+type="checkbox"
+id="lembrar">
+ 
+Lembrar-me
+ 
+</label>
+ 
+<a href="#"
+id="esqueciSenha">
+ 
+Esqueceu sua senha?
+ 
+</a>
+ 
+</div>
+ 
+<div class="captcha">
+ 
+<label>
+ 
+<input
+type="checkbox"
+id="captcha">
+ 
+Não sou um robô
+ 
+</label>
+ 
+<small
+id="erroCaptcha"
+class="erro">
+ 
+</small>
+ 
+</div>
+ 
+<button
+class="btn-login">
+ 
+Entrar
+ 
+</button>
+ 
+<div class="divider">
+ 
+<span>ou</span>
+ 
+</div>
+ 
+<button
+type="button"
+class="btn-social google">
+ 
+<i class="fab fa-google"></i>
+ 
+Entrar com Google
+ 
+</button>
+ 
+<button
+type="button"
+class="btn-social apple">
+ 
+<i class="fab fa-apple"></i>
+ 
+Entrar com Apple
+ 
+</button>
+ 
+<button
+type="button"
+class="btn-outline">
+ 
+Seja um parceiro
+ 
+</button>
+ 
+<!-- MFA -->
+ 
+<div
+class="mfa"
+id="mfa">
+ 
+<h3>
+ 
+Verificação em duas etapas
+ 
+</h3>
+ 
+<input
+id="codigo"
+maxlength="6"
+placeholder="Código de 6 dígitos">
+ 
+<button
+type="button"
+id="verificarCodigo">
+ 
+Verificar
+ 
+</button>
+ 
+</div>
+ 
+</form>
+ 
+</div>
+ 
+</section>
+ 
+</div>
+ 
+<!-- ================= MODAL ================= -->
+ 
+<div
+class="modal"
+id="modal">
+ 
+<div class="modal-box">
+ 
+<span
+class="fechar">
+ 
+&times;
+ 
+</span>
+ 
+<h2>Recuperar senha</h2>
+ 
+<p>Digite seu e-mail.</p>
+ 
+<input
+id="emailRecuperacao"
+type="email"
+placeholder="Seu e-mail">
+ 
+<button
+id="enviarRecuperacao">
+ 
+Enviar Link
+ 
+</button>
+ 
+</div>
+ 
+</div>
+ 
+<!-- Toast -->
+ 
+<div
+id="toast"
+class="toast">
+ 
+</div>
+ 
+<script src="script.js"></script>
+ 
+</body>
+ 
+</html>

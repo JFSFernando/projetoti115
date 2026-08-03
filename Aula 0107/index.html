@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Sistema de Biblioteca - Debug & MediaQuery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📚 Sistema de Biblioteca</h1>
+                <div class="header-controls">
+                    <button id="toggleMode" class="btn btn-secondary">
+                        🔄 Alternar Modo
+                    </button>
+                    <span class="mode-indicator" id="modeIndicator">🐛 Modo Bug</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard com MediaQuery -->
+        <section class="dashboard">
+            <h2>📊 Dashboard - Media Query</h2>
+            <div class="stats-grid">
+                <div class="stat-card" id="statLivros">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Total de Livros</span>
+                        <span class="stat-value" id="totalLivros">0</span>
+                    </div>
+                </div>
+                <div class="stat-card" id="statDisponiveis">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Disponíveis</span>
+                        <span class="stat-value" id="livrosDisponiveis">0</span>
+                    </div>
+                </div>
+                <div class="stat-card" id="statUsuarios">
+                    <div class="stat-icon">👤</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Usuários</span>
+                        <span class="stat-value" id="totalUsuarios">0</span>
+                    </div>
+                </div>
+                <div class="stat-card" id="statEmprestimos">
+                    <div class="stat-icon">📖</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Empréstimos Ativos</span>
+                        <span class="stat-value" id="emprestimosAtivos">0</span>
+                    </div>
+                </div>
+                <div class="stat-card" id="statMedia">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Média por Usuário</span>
+                        <span class="stat-value" id="mediaEmprestimos">0.00</span>
+                    </div>
+                </div>
+                <div class="stat-card" id="statAlertas">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Alertas</span>
+                        <span class="stat-value" id="alertas">0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Debug Console -->
+        <section class="debug-console">
+            <h2>🐛 Console de Debug</h2>
+            <div class="debug-output" id="debugOutput">
+                <div class="log-entry system">🔄 Sistema iniciado. Aguardando comandos...</div>
+            </div>
+            <div class="debug-input-area">
+                <div class="quick-commands">
+                    <button class="cmd-btn" data-cmd="addbook">📚 +Livro</button>
+                    <button class="cmd-btn" data-cmd="adduser">👤 +Usuário</button>
+                    <button class="cmd-btn" data-cmd="borrow">📖 Emprestar</button>
+                    <button class="cmd-btn" data-cmd="return">↩️ Devolver</button>
+                    <button class="cmd-btn" data-cmd="list">📋 Listar</button>
+                    <button class="cmd-btn" data-cmd="media">📊 MediaQuery</button>
+                    <button class="cmd-btn" data-cmd="clear">🗑️ Limpar</button>
+                    <button class="cmd-btn" data-cmd="bug">🐛 Simular Bug</button>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="commandInput" placeholder="Digite um comando ou use os botões...">
+                    <button id="executeCommand" class="btn btn-primary">▶ Executar</button>
+                </div>
+                <div class="command-help">
+                    <small>Comandos: addbook "titulo" "autor" ano | adduser "nome" "email" | borrow livroId usuarioId | return emprestimoId | list | users | media | report | bug</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listas de Dados -->
+        <div class="data-panels">
+            <div class="panel" id="livrosPanel">
+                <h3>📚 Livros</h3>
+                <div class="panel-content" id="livrosList">
+                    <p class="empty-message">Nenhum livro cadastrado</p>
+                </div>
+            </div>
+            <div class="panel" id="usuariosPanel">
+                <h3>👤 Usuários</h3>
+                <div class="panel-content" id="usuariosList">
+                    <p class="empty-message">Nenhum usuário cadastrado</p>
+                </div>
+            </div>
+            <div class="panel" id="emprestimosPanel">
+                <h3>📖 Empréstimos</h3>
+                <div class="panel-content" id="emprestimosList">
+                    <p class="empty-message">Nenhum empréstimo registrado</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breakpoints -->
+        <div class="breakpoints-section">
+            <h3>🔍 Breakpoints</h3>
+            <div class="breakpoints-controls">
+                <button class="btn-breakpoint" data-method="adicionarLivro">📚 adicionarLivro</button>
+                <button class="btn-breakpoint" data-method="registrarUsuario">👤 registrarUsuario</button>
+                <button class="btn-breakpoint" data-method="emprestarLivro">📖 emprestarLivro</button>
+                <button class="btn-breakpoint" data-method="devolverLivro">↩️ devolverLivro</button>
+            </div>
+            <div class="breakpoints-status" id="breakpointsStatus">
+                <span>Nenhum breakpoint ativo</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/biblioteca.js"></script>
+    <script src="js/biblioteca-corrigida.js"></script>
+    <script src="js/debugger.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

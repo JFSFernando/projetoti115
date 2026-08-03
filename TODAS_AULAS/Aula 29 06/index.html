@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏪 Loja de Produtos · JWT + JSON API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <div class="header-content">
+                <h1>🏪 Loja de Produtos</h1>
+                <div class="user-controls">
+                    <span class="status-badge">
+                        <span class="dot" id="statusDot"></span>
+                        <span id="statusText">Desconectado</span>
+                    </span>
+                    <button id="loginBtn" class="btn-primary">🔑 Login</button>
+                    <button id="logoutBtn" class="btn-danger">🚪 Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main>
+            <!-- Painel de administração (visível apenas logado) -->
+            <section id="adminPanel" class="admin-panel">
+                <h2>📦 Gerenciar Produtos</h2>
+                <div class="product-form">
+                    <div class="form-row">
+                        <input type="text" id="productName" placeholder="Nome do produto" class="form-input">
+                        <input type="number" id="productPrice" placeholder="Preço (R$)" class="form-input" step="0.01">
+                        <input type="number" id="productStock" placeholder="Estoque" class="form-input" step="1">
+                    </div>
+                    <div class="form-row">
+                        <textarea id="productDescription" placeholder="Descrição do produto" class="form-textarea"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button id="addProductBtn" class="btn-primary">➕ Adicionar Produto</button>
+                        <button id="refreshBtn" class="btn-secondary">🔄 Atualizar Lista</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lista de produtos -->
+            <section class="products-section">
+                <div class="products-header">
+                    <h2>🛍️ Produtos Disponíveis</h2>
+                    <span class="product-count" id="productCount">0 produtos</span>
+                </div>
+                <div class="products-grid" id="productsContainer">
+                    <div class="empty-message">🔒 Faça login para visualizar os produtos.</div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>⚡ Dados persistidos via <strong>JSON API</strong> (localStorage) · JWT armazenado no <code>sessionStorage</code></p>
+            <p class="demo-info">👤 Login: qualquer usuário · Token expira em 1 hora</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

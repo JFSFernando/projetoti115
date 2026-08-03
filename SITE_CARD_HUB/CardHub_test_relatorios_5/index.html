@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Card Hub | Relatórios</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--=====================================
+            MENU LATERAL
+======================================-->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <h2>Card <span>Hub</span></h2>
+
+    </div>
+
+    <nav>
+
+            <a href="../CardHub_test_dashboard_2/index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+
+            <a href="../CardHub_test_produtos_3/index.html">
+                <i class="fa-solid fa-cube"></i>
+                Produtos
+            </a>
+
+            <a href="../CardHub_test_transacoes_4/index.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transações
+            </a>
+
+            <a href="../CardHub_test_relatorios_5/index.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Relatórios
+            </a>
+
+            <a href="../CardHub_test_beneficios_6/index.html">
+                <i class="fa-solid fa-gift"></i>
+                Benefícios
+            </a>
+
+            <a href="../CardHub_test_parceiros_7/index.html">
+                <i class="fa-solid fa-users"></i>
+                Parceiros
+            </a>
+
+            <a href="../CardHub_test_configuracoes_8/index.html">
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </a>
+
+        </nav>
+
+</aside>
+
+<!--=====================================
+            CONTEÚDO
+======================================-->
+
+<main class="content">
+
+<header>
+
+    <h1>Relatórios</h1>
+
+    <p>
+        Acompanhe os indicadores de vendas e desempenho da plataforma.
+    </p>
+
+</header>
+
+<!--=====================================
+            CARDS
+======================================-->
+
+<section class="cards-resumo">
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-sack-dollar"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Receita Total</h3>
+
+            <h2>R$ 48.920</h2>
+
+            <span class="positivo">
+                +18% este mês
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Vendas</h3>
+
+            <h2>1.284</h2>
+
+            <span class="positivo">
+                +12%
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Clientes</h3>
+
+            <h2>892</h2>
+
+            <span class="positivo">
+                +8%
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="card-info">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+        </div>
+
+        <div>
+
+            <h3>Ticket Médio</h3>
+
+            <h2>R$ 381</h2>
+
+            <span class="positivo">
+                +5%
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=====================================
+            FILTROS
+======================================-->
+
+<section class="toolbar">
+
+    <select id="periodo">
+
+        <option>Últimos 7 dias</option>
+        <option selected>Últimos 30 dias</option>
+        <option>Últimos 90 dias</option>
+        <option>Último Ano</option>
+
+    </select>
+
+    <select id="categoria">
+
+        <option>Todas Categorias</option>
+        <option>Alimentação</option>
+        <option>Vale Presente</option>
+        <option>Benefícios</option>
+        <option>Mobilidade</option>
+
+    </select>
+
+    <button id="exportarPDF">
+
+        <i class="fa-solid fa-file-pdf"></i>
+
+        Exportar PDF
+
+    </button>
+
+    <button id="exportarExcel">
+
+        <i class="fa-solid fa-file-excel"></i>
+
+        Exportar Excel
+
+    </button>
+
+</section>
+
+<!--=====================================
+        GRÁFICO RECEITA
+======================================-->
+
+<section class="grafico">
+
+    <div class="grafico-header">
+
+        <h2>Receita Mensal</h2>
+
+        <span>Últimos 7 meses</span>
+
+    </div>
+
+    <canvas id="graficoReceita"></canvas>
+
+</section>
+
+<!--=====================================
+        GRÁFICO PRODUTOS
+======================================-->
+
+<section class="grafico">
+
+    <div class="grafico-header">
+
+        <h2>Produtos Mais Vendidos</h2>
+
+        <span>Comparativo</span>
+
+    </div>
+
+    <canvas id="graficoProdutos"></canvas>
+
+</section>
+
+<!--=====================================
+        TABELA
+======================================-->
+
+<section class="table-area">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Produto</th>
+
+<th>Categoria</th>
+
+<th>Vendas</th>
+
+<th>Receita</th>
+
+<th>Crescimento</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaRelatorios">
+
+<tr>
+
+<td>Gift Card Premium</td>
+
+<td>Vale Presente</td>
+
+<td>342</td>
+
+<td>R$ 18.420</td>
+
+<td><span class="positivo">+24%</span></td>
+
+</tr>
+
+<tr>
+
+<td>Cartão Refeição</td>
+
+<td>Alimentação</td>
+
+<td>256</td>
+
+<td>R$ 12.800</td>
+
+<td><span class="positivo">+15%</span></td>
+
+</tr>
+
+<tr>
+
+<td>Cartão Benefícios</td>
+
+<td>Múltiplos</td>
+
+<td>189</td>
+
+<td>R$ 9.450</td>
+
+<td><span class="positivo">+31%</span></td>
+
+</tr>
+
+<tr>
+
+<td>Gift Card Digital</td>
+
+<td>Vale Presente</td>
+
+<td>156</td>
+
+<td>R$ 7.800</td>
+
+<td><span class="positivo">+12%</span></td>
+
+</tr>
+
+<tr>
+
+<td>Cartão Cultura</td>
+
+<td>Entretenimento</td>
+
+<td>124</td>
+
+<td>R$ 6.200</td>
+
+<td><span class="positivo">+8%</span></td>
+
+</tr>
+
+<tr>
+
+<td>Cartão Transporte</td>
+
+<td>Mobilidade</td>
+
+<td>98</td>
+
+<td>R$ 4.900</td>
+
+<td><span class="positivo">+5%</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!--=====================================
+        PAGINAÇÃO
+======================================-->
+
+<div class="pagination">
+
+<button>
+<i class="fa-solid fa-angle-left"></i>
+</button>
+
+<button class="active">1</button>
+
+<button>2</button>
+
+<button>3</button>
+
+<button>
+<i class="fa-solid fa-angle-right"></i>
+</button>
+
+</div>
+
+</main>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

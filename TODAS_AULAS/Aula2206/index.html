@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Seguro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Login Seguro</h1>
+                <p>Entre com sua conta</p>
+            </div>
+ 
+            <form id="loginForm" novalidate>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <span class="error-msg" id="emailError">E-mail inválido</span>
+                </div>
+ 
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Senha" required minlength="6">
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <span class="error-msg" id="passwordError">Mínimo 6 caracteres</span>
+                </div>
+ 
+                <div class="options-row">
+                    <label class="remenber-me">
+                        <input type="checkbox" id="remenber">Lembrar-me
+                    </label>
+                    <a href="#" class="forgot-link" id="forgotPassword">Esqueceu a senha?</a>
+                </div>
+ 
+                <div class="recaptcha-container" id="recaptchaContainer">
+                    <div class="recaptcha-box">
+                        <input type="checkbox" id="recaptchaCheck">
+                        <label for="recaptchaCheck">Não sou um robô</label>
+                        <i class="fas fa-robot recaptcha-icon"></i>
+                    </div>
+                    <span class="error-msg" id="recaptchaError">Confirme que não é um robô</span>
+                </div>
+ 
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>Entrar
+                </button>
+            </form>
+ 
+            <div class="divider">ou</div>
+ 
+            <button class="btn-google" id="googleAuth">
+                <i class="fab fa-google"></i>Autenticar com Google
+            </button>
+ 
+            <div class="mfa-section" id="mfaSection" style="display:none;">
+                <p><i class="fas fa-shield-alt"></i>Verificação em duas etapas</p>
+                <div class="input-group">
+                    <i class="fas fa-key"></i>
+                    <input type="text" id="mfaCode" placeholder="Código 6 dígitos" maxlength="6">
+                    <span class="error-msg" id="mfaError">Código invalido</span>
+                </div>
+                <button class="btn-verify" id="verifyMfa">Verificar</button>
+            </div>
+ 
+            <div class="signup-link">
+                Não tem conta?<a href="#">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="modal" id="forgotModal">
+        <div class="modal-content">
+            <span class="modal-clode" id="modalClose">&times;</span>
+            <h2><i class="fas fa-key"></i>Recuperar senha</h2>
+            <p>Enviaremos um link para redefinir sua senha</p>
+            <input type="email" id="resetEmail" placeholder="Seu e-mail">
+            <button id="resetBtn">Enviar link</button>
+        </div>
+    </div>
+ 
+    <div class="toast" id="toast"></div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
+ 

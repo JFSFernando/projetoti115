@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos e JSON</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📦 Objetos e JSON</h1>
+        
+        <div class="card">
+            <h2>🎓 Alunos</h2>
+            <div id="alunosList"></div>
+            <button onclick="adicionarAluno()">➕ Adicionar Aluno</button>
+            <button onclick="salvarJSON()">💾 Salvar JSON</button>
+            <button onclick="carregarJSON()">📂 Carregar JSON</button>
+        </div>
+        
+        <div class="card">
+            <h2>📄 JSON Atual</h2>
+            <pre id="jsonDisplay"></pre>
+        </div>
+    </div>
+    
+    <script src="teste.js"></script>
+</body>
+</html>

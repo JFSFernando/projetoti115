@@ -1,0 +1,70 @@
+#meuElemento {
+
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Cores e estilos para cada estado */
+.estado-inicial {
+    background-color: gray;
+}
+.estado-vermelho {
+    background-color: #ff4d4d;
+}
+.estado-verde {
+    background-color: #4CAF50;
+}
+
+/* Mensagens de dia/noite */
+.mensagem {
+    display: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Classe que será ativada pelo JavaScript para mostrar a mensagem */
+.visivel {
+    display: block !important;
+}
+
+/* Estilo base do botão */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+ 
+/* Estilo do botão quando está DESABILITADO */
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+ 
+/* Estilo dos botões de controle */
+.controles {
+  margin-top: 20px;
+}
+ 
+.controles button {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+/* Esta classe será usada pelo JavaScript para esconder os itens */
+.oculto {
+    display: none !important;
+}

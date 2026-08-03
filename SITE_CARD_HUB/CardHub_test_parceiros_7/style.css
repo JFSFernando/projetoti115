@@ -1,0 +1,600 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+body {
+
+    display: flex;
+    background: #080808;
+    color: white;
+
+}
+
+
+
+
+
+/* ================= SIDEBAR ================= */
+
+
+.sidebar {
+
+    width:260px;
+    height:100vh;
+    background:#111111;
+    padding:25px;
+    position:fixed;
+    border-right:1px solid #222222;
+
+}
+
+
+
+.logo {
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:40px;
+
+}
+
+
+
+.logo-icon {
+
+    width:45px;
+    height:45px;
+    background:#ff7a00;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+.logo h2 {
+
+    font-size:24px;
+
+}
+
+
+
+.logo span {
+
+    color:#ff7a00;
+
+}
+
+
+
+
+
+nav a {
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    margin-bottom:10px;
+    color:#c7c7c7;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+
+}
+
+
+
+nav a:hover {
+
+    background:#1c1c1c;
+    color:white;
+
+}
+
+
+
+nav i {
+
+    width:20px;
+
+}
+
+
+
+
+
+/* ================= CONTEÚDO ================= */
+
+
+.content {
+
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:35px;
+
+}
+
+
+
+header {
+
+    margin-bottom:30px;
+
+}
+
+
+
+header h1 {
+
+    font-size:32px;
+    margin-bottom:8px;
+
+}
+
+
+
+header p {
+
+    color:#8d8d8d;
+
+}
+
+
+
+
+
+
+
+/* ================= CARDS DE ESTATÍSTICAS ================= */
+
+
+.stats {
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-bottom:30px;
+
+}
+
+
+
+.stat-card {
+
+    background:#171717;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:20px;
+    transition:.3s;
+
+}
+
+
+
+.stat-card:hover {
+
+    border-color:#ff7a00;
+    transform:translateY(-4px);
+
+}
+
+
+
+.stat-card .top {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+
+}
+
+
+
+.stat-card i {
+
+    background:#3a210e;
+    color:#ff7a00;
+    width:35px;
+    height:35px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+
+.green {
+
+    background:#063b24;
+    color:#00d46a;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+
+}
+
+
+
+.stat-card h2 {
+
+    font-size:28px;
+    margin-bottom:5px;
+
+}
+
+
+
+.stat-card p {
+
+    color:#999999;
+
+}
+
+
+
+
+
+
+
+/* ================= GRÁFICO E ATIVIDADES ================= */
+
+
+.middle {
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-bottom:35px;
+
+}
+
+
+
+.chart-box,
+.activities {
+
+    background:#171717;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:22px;
+
+}
+
+
+
+.chart-box h2,
+.activities h2 {
+
+    margin-bottom:5px;
+
+}
+
+
+
+.chart-box p {
+
+    color:#8d8d8d;
+    margin-bottom:20px;
+
+}
+
+
+
+#partnerChart {
+
+    max-height:330px;
+
+}
+
+
+
+
+
+
+/* ATIVIDADES */
+
+
+.activities ul {
+
+    list-style:none;
+
+}
+
+
+
+.activities li {
+
+    padding:16px 0;
+    border-bottom:1px solid #292929;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+
+}
+
+
+
+.activities li:last-child {
+
+    border:none;
+
+}
+
+
+
+.activities strong {
+
+    font-size:14px;
+
+}
+
+
+
+.activities span {
+
+    color:#ff7a00;
+    font-size:13px;
+
+}
+
+
+
+.activities small {
+
+    color:#777;
+
+}
+
+
+
+
+
+
+
+
+/* ================= PRODUTOS / PARCEIROS ================= */
+
+
+.products {
+
+    margin-top:20px;
+
+}
+
+
+
+.title {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+
+}
+
+
+
+.title h2 {
+
+    font-size:24px;
+
+}
+
+
+
+.title p {
+
+    color:#8d8d8d;
+    margin-top:5px;
+
+}
+
+
+
+
+.title button {
+
+    background:#ff7a00;
+    border:none;
+    color:white;
+    padding:13px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+
+
+.title button:hover {
+
+    background:#e66d00;
+
+}
+
+
+
+
+
+
+
+/* GRID DE PARCEIROS */
+
+
+.product-grid {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+
+}
+
+
+
+.product-card {
+
+    background:#171717;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:22px;
+    transition:.3s;
+
+}
+
+
+
+.product-card:hover {
+
+    transform:translateY(-5px);
+    border-color:#ff7a00;
+
+}
+
+
+
+.product-card h3 {
+
+    margin-bottom:8px;
+
+}
+
+
+
+.product-card small {
+
+    color:#8d8d8d;
+
+}
+
+
+
+.product-card h2 {
+
+    margin:20px 0 8px;
+    font-size:25px;
+
+}
+
+
+
+.product-card p {
+
+    color:#999999;
+    margin-bottom:12px;
+
+}
+
+
+
+
+
+
+/* ================= RESPONSIVO ================= */
+
+
+@media(max-width:1200px){
+
+
+.stats {
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.product-grid {
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.middle {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:800px){
+
+
+.sidebar {
+
+    width:80px;
+
+}
+
+
+
+.logo h2 {
+
+    display:none;
+
+}
+
+
+
+nav a {
+
+    justify-content:center;
+
+}
+
+
+
+nav a {
+
+    font-size:0;
+
+}
+
+
+
+.content {
+
+    margin-left:80px;
+    width:calc(100% - 80px);
+
+}
+
+
+
+.stats {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.product-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja · Categorias & Promoções</title>
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU SUPERIOR -->
+  <header class="top-menu">
+    <div class="logo">
+      <i class="fas fa-store-alt"></i> ShopNow
+    </div>
+    <nav class="menu-links">
+      <a href="#" onclick="showCategory('todos')">Todos</a>
+      <a href="#" onclick="showCategory('eletronicos')">Eletrônicos</a>
+      <a href="#" onclick="showCategory('moda')">Moda</a>
+      <a href="#" onclick="showCategory('casa')">Casa</a>
+    </nav>
+    <div class="menu-actions">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-user"></i>
+      <span onclick="openCart()" style="cursor:pointer;">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cartCount">0</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL (produtos por categoria) -->
+  <main id="mainContent">
+    <!-- As categorias serão injetadas via JS -->
+  </main>
+
+  <!-- CARRINHO LATERAL (overlay + sidebar) -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2><i class="fas fa-shopping-bag"></i> Carrinho</h2>
+      <button class="close-cart" onclick="closeCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+      <div class="empty-cart-msg">Seu carrinho está vazio.</div>
+    </div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotalPrice">R$ 0,00</span>
+    </div>
+    <button class="checkout-btn" onclick="goToCheckout()">
+      <i class="fas fa-credit-card"></i> Finalizar compra
+    </button>
+  </aside>
+
+  <!-- PÁGINA DE PAGAMENTO (checkout) -->
+  <section class="checkout-page" id="checkoutPage">
+    <button class="back-to-shop" onclick="backToShop()"><i class="fas fa-arrow-left"></i> Voltar à loja</button>
+    <h2><i class="fas fa-file-invoice"></i> Dados para pagamento</h2>
+    <form id="checkoutForm" onsubmit="event.preventDefault(); alert('Pedido finalizado com sucesso! (simulação)');">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" placeholder="Maria Silva" required>
+        </div>
+        <div class="form-group">
+          <label>CPF</label>
+          <input type="text" placeholder="000.000.000-00" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Endereço</label>
+        <input type="text" placeholder="Rua Exemplo, 123" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Cidade</label>
+          <input type="text" placeholder="São Paulo" required>
+        </div>
+        <div class="form-group">
+          <label>UF</label>
+          <input type="text" placeholder="SP" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>CEP</label>
+        <input type="text" id="cepInput" placeholder="00000-000" required>
+        <button type="button" onclick="calcularFrete()" style="margin-top:0.5rem; background:#0f172a; color:white; border:none; padding:0.4rem 1.2rem; border-radius:40px; font-weight:600; cursor:pointer;">Calcular frete</button>
+      </div>
+      <div class="frete-result" id="freteResult">
+        <span>Frete:</span>
+        <span id="freteValor">R$ 0,00</span>
+      </div>
+      <div class="form-group">
+        <label>Número do cartão</label>
+        <input type="text" placeholder="**** **** **** 1234" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Validade</label>
+          <input type="text" placeholder="MM/AA" required>
+        </div>
+        <div class="form-group">
+          <label>CVV</label>
+          <input type="text" placeholder="123" required>
+        </div>
+      </div>
+      <button type="submit" class="btn-pagar"><i class="fas fa-lock"></i> Pagar agora</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

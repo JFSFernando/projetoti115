@@ -1,0 +1,303 @@
+/* ===== RESET E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --- Tema Claro (padrão) --- */
+    --bg-body: #f0f5fa;
+    --bg-card: #ffffff;
+    --bg-input: #fafdff;
+    --bg-status: #e7f0f8;
+    --bg-coord: #dcebf5;
+    --bg-subhead: #eef5fa;
+    
+    --text-primary: #0b2a3c;
+    --text-secondary: #2c5775;
+    --text-status: #005a7a;
+    --text-coord: #1c445b;
+    
+    --border-input: #d4e2ed;
+    --border-status: #cbdde9;
+    --border-map: #dae8f0;
+    --border-subhead: #3b8fc2;
+    
+    --shadow-card: 0 20px 40px -12px rgba(0, 20, 30, 0.25);
+    --shadow-btn: 0 4px 10px rgba(0, 50, 70, 0.12);
+    --shadow-map: 0 6px 14px rgba(0, 30, 40, 0.08);
+    
+    --btn-bg: #105a7a;
+    --btn-border: #2f7a9b;
+    --btn-hover: #0e4a64;
+    --btn-hover-border: #0a3d53;
+    
+    --transition: 0.3s ease;
+}
+
+/* ===== TEMA ESCURO ===== */
+[data-theme="dark"] {
+    --bg-body: #111827;
+    --bg-card: #1f2937;
+    --bg-input: #374151;
+    --bg-status: #1e293b;
+    --bg-coord: #1e293b;
+    --bg-subhead: #1e293b;
+    
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --text-status: #60a5fa;
+    --text-coord: #9ca3af;
+    
+    --border-input: #4b5563;
+    --border-status: #374151;
+    --border-map: #374151;
+    --border-subhead: #3b82f6;
+    
+    --shadow-card: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+    --shadow-btn: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --shadow-map: 0 6px 14px rgba(0, 0, 0, 0.3);
+    
+    --btn-bg: #2563eb;
+    --btn-border: #3b82f6;
+    --btn-hover: #1d4ed8;
+    --btn-hover-border: #60a5fa;
+}
+
+/* ===== CORPO ===== */
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: var(--bg-body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: background var(--transition);
+}
+
+/* ===== CARD PRINCIPAL ===== */
+.card {
+    max-width: 900px;
+    width: 100%;
+    background: var(--bg-card);
+    border-radius: 32px;
+    box-shadow: var(--shadow-card);
+    padding: 1.8rem 2rem 2.2rem;
+    transition: background var(--transition), box-shadow var(--transition);
+}
+
+/* ===== CABEÇALHO ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color var(--transition);
+}
+
+.subhead {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 1rem;
+    border-left: 4px solid var(--border-subhead);
+    padding-left: 0.9rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1.4rem;
+    background: var(--bg-subhead);
+    border-radius: 0 12px 12px 0;
+    line-height: 1.4;
+    transition: all var(--transition);
+}
+
+/* ===== BOTÃO DE TEMA ===== */
+.theme-toggle {
+    background: var(--bg-coord);
+    border: 1px solid var(--border-input);
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    background: var(--border-input);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* ===== ÁREA DE BUSCA ===== */
+.busca-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+    align-items: center;
+}
+
+.busca-container input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 60px;
+    border: 2px solid var(--border-input);
+    font-size: 1rem;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    transition: all var(--transition);
+    outline: none;
+}
+
+.busca-container input:focus {
+    border-color: var(--btn-bg);
+    box-shadow: 0 0 0 4px rgba(47, 139, 176, 0.15);
+    background: var(--bg-card);
+}
+
+.busca-container input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.busca-container button {
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    color: white;
+    font-weight: 600;
+    padding: 0.7rem 1.8rem;
+    border-radius: 60px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-btn);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.busca-container button:hover:not(:disabled) {
+    background: var(--btn-hover);
+    transform: scale(0.97);
+    border-color: var(--btn-hover-border);
+}
+
+.busca-container button:active:not(:disabled) {
+    transform: scale(0.94);
+}
+
+.busca-container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== MAPA ===== */
+#map {
+    height: 420px;
+    width: 100%;
+    border-radius: 24px;
+    border: 2px solid var(--border-map);
+    box-shadow: var(--shadow-map);
+    transition: all var(--transition);
+}
+
+/* ===== RODAPÉ ===== */
+.info-rodape {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--text-coord);
+    transition: color var(--transition);
+}
+
+.coordenadas {
+    background: var(--bg-coord);
+    padding: 0.4rem 1.2rem;
+    border-radius: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    transition: all var(--transition);
+}
+
+.status-msg {
+    background: var(--bg-status);
+    padding: 0.3rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    color: var(--text-status);
+    border: 1px solid var(--border-status);
+    min-height: 2.4rem;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 550px) {
+    .card {
+        padding: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    #map {
+        height: 300px;
+    }
+    
+    .busca-container input {
+        min-width: 140px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .theme-toggle {
+        align-self: flex-end;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .info-rodape {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .coordenadas, .status-msg {
+        text-align: center;
+        justify-content: center;
+    }
+}

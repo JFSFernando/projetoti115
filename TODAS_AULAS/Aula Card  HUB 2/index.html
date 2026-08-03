@@ -1,0 +1,233 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Card Hub - Produtos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-regular fa-credit-card"></i>
+                </div>
+
+                <h2>Card Hub</h2>
+
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </a>
+
+                <a href="#" class="active">
+                    <i class="fa-solid fa-cube"></i>
+                    Produtos
+                </a>
+
+                <a href="clientes.html">
+                    <i class="fa-regular fa-user"></i>
+                    Clientes
+                </a>
+
+                <a href="configuracoes.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </a>
+
+            </nav>
+
+        </div>
+
+        <button id="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Sair
+
+        </button>
+
+    </aside>
+
+    <!-- Conteúdo -->
+
+    <main>
+
+        <div class="card">
+
+            <form id="productForm">
+
+                <!-- Nome -->
+
+                <div class="input-group">
+
+                    <label>Nome do produto</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite o nome do produto">
+
+                </div>
+
+                <!-- Categoria -->
+
+                <div class="input-group">
+
+                    <label>Categoria</label>
+
+                    <select id="categoria">
+
+                        <option value="">
+                            Selecione uma categoria
+                        </option>
+
+                        <option>Vale Alimentação</option>
+
+                        <option>Vale Refeição</option>
+
+                        <option>Vale Transporte</option>
+
+                        <option>Plano de Saúde</option>
+
+                        <option>Gift Card</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Descrição -->
+
+                <div class="input-group">
+
+                    <label>Descrição</label>
+
+                    <textarea
+                        id="descricao"
+                        placeholder="Descreva seu produto"></textarea>
+
+                </div>
+
+                <!-- Upload -->
+
+                <div class="input-group">
+
+                    <label>Upload de imagem</label>
+
+                    <div
+                        class="upload-area"
+                        id="dropArea">
+
+                        <input
+                            type="file"
+                            id="imagem"
+                            hidden
+                            accept="image/png,image/jpeg,image/webp">
+
+                        <i class="fa-regular fa-image upload-icon"></i>
+
+                        <h3>
+                            Arraste e solte uma imagem aqui
+                        </h3>
+
+                        <span>ou</span>
+
+                        <button
+                            type="button"
+                            id="selectBtn">
+
+                            Selecionar arquivo
+
+                        </button>
+
+                        <small>
+                            PNG, JPG ou WEBP (máx. 5MB)
+                        </small>
+
+                    </div>
+
+                    <!-- Preview -->
+
+                    <div
+                        id="preview"
+                        class="preview">
+
+                        <img id="previewImg">
+
+                        <button
+                            type="button"
+                            id="removeImage">
+
+                            Remover
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Botões -->
+
+                <div class="buttons">
+
+                    <button
+                        type="reset"
+                        class="cancel">
+
+                        CANCELAR
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="continue">
+
+                        CONTINUAR
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- Toast -->
+
+    <div
+        id="toast"
+        class="toast">
+    </div>
+
+    <!-- Loader -->
+
+    <div
+        id="loader"
+        class="loader">
+
+        <div class="spinner"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

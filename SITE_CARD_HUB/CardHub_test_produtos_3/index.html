@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Card Hub - Produtos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Buscar Produto</h1>
+
+        <input
+            type="text"
+            id="produto"
+            placeholder="Digite um produto">
+
+        <button onclick="buscarProduto()">
+            Buscar
+        </button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <h2>Card <span>Hub</span></h2>
+
+        </div>
+
+        <nav>
+
+            <a href="../CardHub_test_dashboard_2/index.html">
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </a>
+
+            <a href="../CardHub_test_produtos_3/index.html">
+                <i class="fa-solid fa-cube"></i>
+                Produtos
+            </a>
+
+            <a href="../CardHub_test_transacoes_4/index.html">
+                <i class="fa-solid fa-right-left"></i>
+                Transações
+            </a>
+
+            <a href="../CardHub_test_relatorios_5/index.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Relatórios
+            </a>
+
+            <a href="../CardHub_test_beneficios_6/index.html">
+                <i class="fa-solid fa-gift"></i>
+                Benefícios
+            </a>
+
+            <a href="../CardHub_test_parceiros_7/index.html">
+                <i class="fa-solid fa-users"></i>
+                Parceiros
+            </a>
+
+            <a href="../CardHub_test_configuracoes_8/index.html">
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+
+            <div>
+
+                <h1>Produtos</h1>
+
+                <p>
+                    Gerencie todos os produtos cadastrados.
+                </p>
+
+            </div>
+
+        </header>
+
+        <section class="toolbar">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar produto...">
+
+            <select id="categoria">
+
+                <option value="Todos">Todas Categorias</option>
+
+                <option value="Gift Card">Gift Card</option>
+
+                <option value="Alimentação">Alimentação</option>
+
+                <option value="Mobilidade">Mobilidade</option>
+
+                <option value="Entretenimento">Entretenimento</option>
+
+            </select>
+
+            <button id="novoProduto">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Novo Produto
+
+            </button>
+
+        </section>
+
+        <section class="table-area">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Imagem</th>
+
+                        <th>Produto</th>
+
+                        <th>Categoria</th>
+
+                        <th>Preço</th>
+
+                        <th>Status</th>
+
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaProdutos">
+
+                    <tr>
+
+                        <td>
+
+                            <img
+                                src="https://copilot.microsoft.com/th/id/BCO.d3a89d1d-726c-404a-843a-22ee6086f39d.png"
+                                alt="Produto">
+
+                        </td>
+
+                        <td>Gift Card Premium</td>
+
+                        <td>Gift Card</td>
+
+                        <td>R$ 250,00</td>
+
+                        <td>
+
+                            <span class="status ativo">
+                                Ativo
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="acao visualizar">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                            <button class="acao editar">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="acao excluir">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <img
+                                src="https://copilot.microsoft.com/th/id/BCO.73e90498-689b-4d82-8fbc-5c354431ffce.png"
+                                alt="Produto">
+
+                        </td>
+
+                        <td>Cartão Refeição</td>
+
+                        <td>Alimentação</td>
+
+                        <td>R$ 180,00</td>
+
+                        <td>
+
+                            <span class="status ativo">
+                                Ativo
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="acao visualizar">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                            <button class="acao editar">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="acao excluir">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <img
+                                src="https://copilot.microsoft.com/th/id/BCO.675d9fee-f5e1-4a1d-b742-91c02cbc4e22.png"
+                                alt="Produto">
+
+                        </td>
+
+                        <td>Cartão Cultura</td>
+
+                        <td>Entretenimento</td>
+
+                        <td>R$ 95,00</td>
+
+                        <td>
+
+                            <span class="status ativo">
+                                Ativo
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="acao visualizar">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                            <button class="acao editar">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="acao excluir">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <img
+                                src="https://copilot.microsoft.com/th/id/BCO.920b9663-ef64-42b2-859d-0ac9d8647b73.png"
+                                alt="Produto">
+
+                        </td>
+
+                        <td>Vale Transporte</td>
+
+                        <td>Mobilidade</td>
+
+                        <td>R$ 120,00</td>
+
+                        <td>
+
+                            <span class="status inativo">
+                                Inativo
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="acao visualizar">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                            <button class="acao editar">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="acao excluir">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <td>
+ 
+                            <img
+                                src="https://m.media-amazon.com/images/I/81-Yw7YyRBL._AC_UF894,1000_QL80_.jpg"
+                                alt="Produto">
+ 
+                        </td>
+ 
+                        <td>Arroz</td>
+ 
+                        <td>Alimentos</td>
+ 
+                        <td>R$ 35,00</td>
+ 
+                        <td>
+ 
+                            <span class="status inativo">
+                                Ativo
+                            </span>
+ 
+                        </td>
+ 
+                        <td>
+ 
+                            <button class="acao visualizar">
+ 
+                                <i class="fa-solid fa-eye"></i>
+ 
+                            </button>
+ 
+                            <button class="acao editar">
+ 
+                                <i class="fa-solid fa-pen"></i>
+ 
+                            </button>
+ 
+                            <button class="acao excluir">
+ 
+                                <i class="fa-solid fa-trash"></i>
+ 
+                            </button>
+ 
+                        </td>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="pagination">
+
+            <button>
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <button class="active">1</button>
+
+            <button>2</button>
+
+            <button>3</button>
+
+            <button>4</button>
+
+            <button>
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

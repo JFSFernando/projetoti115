@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Parceiros Card Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<div class="logo-icon">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+<h2>Card <span>Hub</span></h2>
+
+</div>
+
+
+
+<nav>
+
+
+<a href="../CardHub_test_dashboard_2/index.html">
+
+<i class="fa-solid fa-table-columns"></i>
+
+Dashboard
+
+</a>
+
+
+
+<a href="../CardHub_test_produtos_3/index.html">
+
+<i class="fa-solid fa-cube"></i>
+
+Produtos
+
+</a>
+
+
+
+<a href="../CardHub_test_transacoes_4/index.html">
+
+<i class="fa-solid fa-right-left"></i>
+
+Transações
+
+</a>
+
+
+
+<a href="../CardHub_test_relatorios_5/index.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Relatórios
+
+</a>
+
+
+
+<a href="../CardHub_test_beneficios_6/index.html">
+
+<i class="fa-solid fa-gift"></i>
+
+Benefícios
+
+</a>
+
+
+
+<a href="../CardHub_test_parceiros_7/index.html">
+
+<i class="fa-solid fa-users"></i>
+
+Parceiros
+
+</a>
+
+
+
+<a href="../CardHub_test_configuracoes_8/index.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Configurações
+
+</a>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+<main class="content">
+
+
+<header>
+
+
+<div>
+
+<h1>Gestão de Parceiros</h1>
+
+
+<p>
+Gerencie seus parceiros e acompanhe resultados comerciais
+</p>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="stats">
+
+
+
+<div class="stat-card">
+
+
+<div class="top">
+
+<i class="fa-solid fa-handshake"></i>
+
+
+<span class="green">
+
++4 este mês
+
+</span>
+
+</div>
+
+
+<h2>
+128
+</h2>
+
+
+<p>
+Parceiros ativos
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<div class="top">
+
+<i class="fa-solid fa-store"></i>
+
+
+<span class="green">
+
++15%
+
+</span>
+
+
+</div>
+
+
+<h2>
+36
+</h2>
+
+
+<p>
+Novos parceiros
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<div class="top">
+
+<i class="fa-solid fa-users"></i>
+
+
+<span class="green">
+
++21%
+
+</span>
+
+
+</div>
+
+
+<h2>
+18.420
+</h2>
+
+
+<p>
+Clientes alcançados
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<div class="top">
+
+<i class="fa-solid fa-dollar-sign"></i>
+
+
+<span class="green">
+
++18%
+
+</span>
+
+
+</div>
+
+
+<h2>
+R$ 96.850
+</h2>
+
+
+<p>
+Receita gerada
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="middle">
+
+
+
+<div class="chart-box">
+
+
+<h2>
+Desempenho dos Parceiros
+</h2>
+
+
+<p>
+Receita gerada pelos parceiros nos últimos meses
+</p>
+
+
+<canvas id="partnerChart"></canvas>
+
+
+</div>
+
+
+
+
+
+
+<div class="activities">
+
+
+<h2>
+Atividades Recentes
+</h2>
+
+
+
+<ul>
+
+
+
+<li>
+
+<strong>
+Novo parceiro cadastrado
+</strong>
+
+<span>
+Academia Fit+
+</span>
+
+<small>
+5 min atrás
+</small>
+
+</li>
+
+
+
+
+<li>
+
+<strong>
+Contrato atualizado
+</strong>
+
+<span>
+Rede Restaurante
+</span>
+
+<small>
+30 min atrás
+</small>
+
+</li>
+
+
+
+
+
+<li>
+
+<strong>
+Novo benefício criado
+</strong>
+
+<span>
+Cinema Premium
+</span>
+
+<small>
+1 hora atrás
+</small>
+
+</li>
+
+
+
+
+
+<li>
+
+<strong>
+Parceiro recebeu pagamento
+</strong>
+
+<span>
+R$ 2.500,00
+</span>
+
+<small>
+2 horas atrás
+</small>
+
+</li>
+
+
+
+
+
+<li>
+
+<strong>
+Novo parceiro aprovado
+</strong>
+
+<span>
+Loja Esporte+
+</span>
+
+<small>
+3 horas atrás
+</small>
+
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="products">
+
+
+
+<div class="title">
+
+
+<div>
+
+<h2>
+Parceiros Cadastrados
+</h2>
+
+
+<p>
+Principais parceiros da plataforma
+</p>
+
+
+</div>
+
+
+
+<button id="novoParceiro">
+
++ Cadastrar Parceiro
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="product-grid">
+
+
+
+
+
+
+<div class="product-card">
+
+
+<h3>
+Academia Fit+
+</h3>
+
+
+<small>
+Saúde e Bem-estar
+</small>
+
+
+<h2>
+3.240 clientes
+</h2>
+
+
+<p>
+Benefícios ativos
+</p>
+
+
+<span class="green">
++28%
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="product-card">
+
+
+<h3>
+Restaurante Sabor
+</h3>
+
+
+<small>
+Alimentação
+</small>
+
+
+<h2>
+2.850 clientes
+</h2>
+
+
+<p>
+Benefícios ativos
+</p>
+
+
+<span class="green">
++22%
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="product-card">
+
+
+<h3>
+Cinema Premium
+</h3>
+
+
+<small>
+Entretenimento
+</small>
+
+
+<h2>
+1.980 clientes
+</h2>
+
+
+<p>
+Benefícios ativos
+</p>
+
+
+<span class="green">
++17%
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="product-card">
+
+
+<h3>
+Farmácia Saúde+
+</h3>
+
+
+<small>
+Saúde
+</small>
+
+
+<h2>
+1.540 clientes
+</h2>
+
+
+<p>
+Benefícios ativos
+</p>
+
+
+<span class="green">
++13%
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="product-card">
+
+
+<h3>
+Escola Digital
+</h3>
+
+
+<small>
+Educação
+</small>
+
+
+<h2>
+920 clientes
+</h2>
+
+
+<p>
+Benefícios ativos
+</p>
+
+
+<span class="green">
++9%
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="product-card">
+
+
+<h3>
+Transportes Urbanos
+</h3>
+
+
+<small>
+Mobilidade
+</small>
+
+
+<h2>
+780 clientes
+</h2>
+
+
+<p>
+Benefícios ativos
+</p>
+
+
+<span class="green">
++6%
+</span>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurações Card Hub</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+ 
+<button id="menuBtn" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+ 
+<aside class="sidebar">
+<div class="logo">
+<div class="logo-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+<h2>Card <span>Hub</span></h2>
+</div>
+ 
+<nav>
+<a href="../CardHub_test_dashboard_2/index.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+<a href="../CardHub_test_produtos_3/index.html"><i class="fa-solid fa-cube"></i> Produtos</a>
+<a href="../CardHub_test_transacoes_4/index.html"><i class="fa-solid fa-right-left"></i> Transações</a>
+<a href="../CardHub_test_relatorios_5/index.html"><i class="fa-solid fa-chart-column"></i> Relatórios</a>
+<a href="../CardHub_test_beneficios_6/index.html"><i class="fa-solid fa-gift"></i> Benefícios</a>
+<a href="../CardHub_test_parceiros_7/index.html"><i class="fa-solid fa-users"></i> Parceiros</a>
+<a class="active" href="#"><i class="fa-solid fa-gear"></i> Configurações</a>
+</nav>
+</aside>
+ 
+<div id="overlay" class="overlay"></div>
+ 
+<main class="content">
+<header>
+<h1>Configurações</h1>
+<p>Gerencie sua conta e personalize o sistema</p>
+</header>
+ 
+<section class="profile">
+<div class="avatar"><i class="fa-solid fa-building"></i></div>
+ 
+<div class="profile-info">
+<h2 id="empresaNome">Card Hub Tecnologia</h2>
+<p id="empresaEmail">admin@cardhub.com</p>
+<span>Conta ativa</span>
+</div>
+ 
+<button id="editarPerfil">Editar Perfil</button>
+</section>
+ 
+<section class="settings-grid">
+ 
+<div class="settings-card">
+<i class="fa-solid fa-user"></i>
+<div>
+<h3>Conta</h3>
+<p>Alterar informações da empresa</p>
+</div>
+<button onclick="abrirConta()">Editar</button>
+</div>
+ 
+<div class="settings-card">
+<i class="fa-solid fa-lock"></i>
+<div>
+<h3>Segurança</h3>
+<p>Alterar senha e permissões</p>
+</div>
+<button onclick="abrirSenha()">Alterar</button>
+</div>
+ 
+<div class="settings-card">
+<i class="fa-solid fa-bell"></i>
+<div>
+<h3>Notificações</h3>
+<p>Gerencie seus alertas</p>
+</div>
+<label class="switch">
+<input id="notificacao" type="checkbox" checked>
+<span></span>
+</label>
+</div>
+ 
+<div class="settings-card">
+<i class="fa-solid fa-palette"></i>
+<div>
+<h3>Preferências</h3>
+<p>Personalização do sistema</p>
+</div>
+<button onclick="abrirPreferencias()">Editar</button>
+</div>
+ 
+</section>
+ 
+</main>
+ 
+<div class="modal" id="modal">
+<div class="modal-content">
+ 
+<div class="modal-header">
+<h2 id="tituloModal">Editar</h2>
+<button class="close-modal" onclick="fecharModal()">
+<i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+ 
+<div id="conteudoModal"></div>
+ 
+<div class="modal-footer">
+<button class="cancelar" onclick="fecharModal()">Cancelar</button>
+<button id="salvarModal">Salvar</button>
+</div>
+ 
+</div>
+</div>
+ 
+<div id="toast" class="toast">Configurações salvas!</div>
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>
