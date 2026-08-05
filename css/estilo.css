@@ -1,55 +1,232 @@
-.ubuntu-light {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+@charset "utf-8";
+
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
 }
- 
-.ubuntu-regular {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+body{
+font-family: 'Ubuntu', sans-serif;
+background-image: url(../img/hypnotize.png);
+background-attachment: fixed;
+width: 100%;
 }
- 
-.ubuntu-medium {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+
+img{
+  width: 100%;
 }
- 
-.ubuntu-bold {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+/* =============configurações de mobile frist============= */
+/* topo */
+#topo{
+  background-color: rgba(24, 56, 29, 0.9);
+  border-bottom:  solid 1px;
+  text-align: center;
+  margin-bottom: 15px;
 }
- 
-.ubuntu-light-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+
+h1 img{
+  margin-top: 25px;
+  width: 200px;
 }
- 
-.ubuntu-regular-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+
+nav {
+  min-height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 40px;
+  padding-left: 1%;
 }
- 
-.ubuntu-medium-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+
+nav a:link,
+nav a:visited,
+#iconMenu:link,
+#iconMenu:visited{
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
-.ubuntu-bold-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+
+nav a:focus,
+nav a:hover,
+#iconMenu:focus,
+#iconMenu:hover{
+  background-color: #A98E12;
+  color: #000;
+  transition: background-color 1s;
+  border-radius: 5%;
 }
- 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+
+#iconMenu{
+  color: white;
+  cursor: pointer;
+  min-height: 40px;
+  line-height: 40px;
+  padding-left: 1%;
+  font-size: 40px;
+}
+/* =====configurações do footer ========== */
+.rodape{
+  border-top: solid 5px #06632E;
+  background-color: #000;
+  color: #7F7F80;
+  text-align: center;
+  width: 100%;
+}
+
+.rodape p,li{
+  font-size: 16px;
+}
+.rodape img{
+  margin: 0 5px;
+}
+.rodape-conteudo{
+  padding: 15px;
+  color: #fff;
+}
+.rodape-conteudo li{
+  list-style: none;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#logo-rodape{
+  min-width: 146px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.menu-rodape a {
+  text-decoration: none;
+  color: #7F7F80;
+}
+.menu-rodape a:hover{
+  color: #fff;
+}
+.redes img{
+  min-width: 35px;
+  width: 35px;
+}
+.assinatura{
+  color: #fff;
+  background-color: #7F7F80;
+  text-align: center;
+  height: auto;
+  padding: 1%;
+}
+.assinatura p{
+  margin-top: 3%;
+}
+
+/* conteúdo */
+
+.conteudo{
+  max-width: 95%;
+  margin: auto;
+}
+.conteudo article{
+  background-color: #fff;
+  margin: 15px 0;
+  padding: 1%;
+  box-shadow: grey 1px 1px 5px;
+}
+.conteudo h2,
+.conteudo h3,
+.conteudo p{
+  padding: 1%;
+}
+.titulo{
+  font-size: 1.4em;
+  color: #ED6D19;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* COnfigurações da Home */
+
+.destaque img{
+  border-bottom: dotted #ED6D19 5px;
+}
+
+.text-destaque{
+  position: relative;
+  bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 80px;
+  margin-top: 5px;
+  width: 100%;
+}
+.text-destaque h2{
+  color: #000 !important;
+  margin-top: 5px;
+  padding: 5px 0 3px 50px;
+}
+.text-destaque p{
+  margin-top: 5px;
+  font-size: 1.1em;
+  padding: 0 0 5px 50px;
+}
+#frase p{
+  font-size: 1em;
+  padding: 12px;
+}
+#frase{
+  color: #fff;
+  background-color: #ED6D19;
+  text-align: center;
+  height: 80px;
+}
+.card{
+  margin: 15px 0;
+  padding: 5%;
+}
+.card p{
+  text-align: center;
+  padding: 1% 0 2% 0;
+}
+
+.card-conteudo figure{
+  margin: 1%;
+  position: relative;
+  box-sizing: grey 1px 1px 5px;
+}
+.card-conteudo figcaption{
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  background-color: rgba(127, 127, 128, 0.8);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card-conteudo figure img{
+  transition: 1s;
+  filter: opacity(1);
+}
+.card-conteudo a:hover img,
+.card-conteudo a:focus img{
+  filter: opacity(0.6);
+}
+#video{
+  width: 100%;
+  background-color: rgba(6, 99, 46, 0.5);
+  text-align: center;
+}
+#titulo-video{
+  color: #fff;
+  padding: 15px;
+}
+iframe{
+  margin: auto;
+  max-width: 80%;
+  display: block;
+  padding: 2% 0;
 }
